@@ -106,7 +106,7 @@ endfunction
 
 " }}}1
 function! vimtex#compiler#compile_selected(type) abort range " {{{1
-  let l:file = vimtex#parser#selection_to_texfile(a:type)
+  let l:file = vimtex#parser#selection_to_texfile(a:type, a:firstline, a:lastline)
   if empty(l:file) | return | endif
 
   " Create and initialize temporary compiler

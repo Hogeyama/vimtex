@@ -20,7 +20,7 @@ function! vimtex#misc#wc(type, detailed, ...) abort range " {{{1
   if empty(a:type)
     let l:file = b:vimtex
   else
-    let l:file = vimtex#parser#selection_to_texfile(a:type)
+    let l:file = vimtex#parser#selection_to_texfile(a:type, a:firstline, a:lastline)
   endif
 
   " Run texcount, save output to lines variable
